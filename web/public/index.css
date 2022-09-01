@@ -1,0 +1,81 @@
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+#prompt_forum {
+  display: flex;
+}
+
+#slider_td {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#submit-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+button {
+  border: 1px rgb(51, 51, 51) solid;
+  border-radius: 0.5rem;
+  padding: 5px;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: rgb(224, 224, 224);
+}
+
+button:active {
+  background-color: rgb(210, 210, 210);
+}
+
+input {
+  border: 1px rgb(51, 51, 51) solid;
+  border-radius: 0.5rem;
+  padding: 5px;
+  background-color: white;
+}
+
+td {
+  padding: 0px 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#current_prompts td {
+  text-align: center;
+}
+
+.prompt.generated {
+  color:rgb(94, 94, 94);
+}
+
+.prompt.generated a {
+  color:rgb(94, 94, 94);
+}
+
+#image {
+  display: none;
+  padding: 10px 0px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+

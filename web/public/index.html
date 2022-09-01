@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Images</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <main>
+    <svg style="display: none;">
+      <defs>
+        <circle id="progress" cx="10" cy="10" r="5" stroke="red" fill="rgba(0, 0, 0, 0)"
+          stroke-dasharray="15.710065841674805" stroke-width=2>
+          <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+            from="0 10 10" to="360 10 10" dur="0.5s" repeatCount="indefinite" />
+        </circle>
+      </defs>
+    </svg>
+
+    <h1>AI Images</h1>
+    <div id="image">
+      <h2>Selected Image</h2>
+      <div>Prompt: <span id="display_prompt"></span></div>
+      <div>Iterations: <span id="display_iterations"></span></div>
+      <div>Seed: <span id="display_seed"></span></div>
+      <div>Author: <span id="display_author"></span></div>
+      <div><img id="display_image"></div>
+      <div style="display: none;" id="image_not_generated">Image has not been generated yet</div>
+    </div>
+    <h2>Submit Prompt</h2>
+    <div id="prompt_forum">
+      <table>
+        <tr>
+          <td><label for="prompt_text">Prompt Text</label></td>
+          <td><input id="prompt_text" type="text"></td>
+        </tr>
+        <tr>
+          <td><label for="iterations">Iterations</label></td>
+          <td id="slider_td"><input id="iterations" type="range" min="1" max="99" step="1">
+            <span id="current_iterations">30</span>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="priority">Priority</label></td>
+          <td id="slider_td"><input id="priority" type="range" min="1" max="99" step="1">
+            <span id="current_priority">50</span>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="seed">Seed</label></td>
+          <td><input id="seed" type="number"></td>
+        </tr>
+        <tr>
+          <td><label for="author">Your Name</label></td>
+          <td><input id="author" type="text"></td>
+        </tr>
+        <tr>
+          <td><label for="token">Token</label></td>
+          <td><input id="token" type="text"></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div id="submit-button-container">
+              <button id="submit">Submit</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h2>Prompts</h2>
+    <table id="current_prompts">
+
+    </table>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
