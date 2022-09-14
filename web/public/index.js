@@ -7,7 +7,7 @@ const $ = (s) => {
 };
 const $$ = document.querySelectorAll.bind(document);
 
-const api = "http://localhost:5000";
+const api = "http://192.168.86.32:5000";
 
 const currentPrompts = [];
 
